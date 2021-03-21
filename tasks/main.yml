@@ -1,0 +1,8 @@
+---
+# tasks file for ansible_role_online_repository
+
+- name: copy update-repo daily cron script
+  template:
+    src: RedHat-update-repo.j2
+    dest: /etc/cron.daily/update-repo
+    mode: 755
